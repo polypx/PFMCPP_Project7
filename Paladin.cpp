@@ -1,7 +1,20 @@
 #include "Paladin.h"
+#include "Utility.h"
 
-// Paladin::Paladin
+// did the exact same thing as Dwarf, with Paladin
 
-// Paladin::getName
+Paladin::Paladin(std::string name_, int hp_, int armor_) : Character(hp_, armor_, 0), name(name_) 
+{
 
-// Paladin::getStats
+}
+
+const std::string& Paladin::getName()
+{
+    return  name;
+}
+
+std::string Paladin::getStats()         // using function from Utility.h
+{
+    return getCharacterStats(this);   // pass the Paladin instance to getCharacterStats
+}
+
