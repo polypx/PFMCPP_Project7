@@ -1,7 +1,9 @@
 #include "Dwarf.h"
 #include "Utility.h"
 
-Dwarf::Dwarf(std::string name, int hp, int armour) : Character(hp, armour, 0), name(name)
+// constructor ,  base constructor passed two values from derived class (hp_ and armor_)
+//                                                            THEN passed it's own name_
+Dwarf::Dwarf(std::string name_, int hp_, int armor_) : Character(hp_, armor_, 0), name(name_) 
 {
 
 }

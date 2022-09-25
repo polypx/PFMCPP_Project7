@@ -1,6 +1,6 @@
 #pragma once
 
-struct Paladin : Character
+struct Paladin : public Character
 {
 private:
     const std::string name;

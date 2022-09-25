@@ -2,7 +2,7 @@
 
 #include "Character.h"
 
-struct Dragon : Character
+struct Dragon : public Character
 {
     void attack(Character& other) override;
 private:
