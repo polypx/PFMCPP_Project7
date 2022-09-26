@@ -4,7 +4,7 @@
 
 // did the exact same thing as Dwarf and Paladin
 
-Paladin::Dragon(std::string name_, int hp_, int armor_) : Character(hp_, armor_, 0), name(name_) 
+Dragon::Dragon(std::string name_, int hp_, int armor_) : Character(hp_, armor_, 0), name(name_) 
 {
 
 }
