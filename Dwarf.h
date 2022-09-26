@@ -3,7 +3,7 @@
 
 struct Dwarf : public Character
 {
-    Dwarf(std::string , int, int ) ; // why can't I put the full constructor here?
+    Dwarf(std::string name, int hp, int armor) ; 
 
     const std::string& getName() override;  // rewrite the inherited getName
     std::string getStats() override;        // rewrite the inherited getStats
