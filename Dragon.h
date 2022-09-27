@@ -1,7 +1,7 @@
 #pragma once
 #include "Character.h"
 
-struct Dragon : public Character
+struct Dragon : Character
 {
     void attack(Character& other) override;
 
