@@ -102,11 +102,10 @@ int main()
     dragon.attack( dragonSlayer ); //he dodges
     
     dragonSlayer.attack( dragon ); //dragon is slayed.
-    /*
+
     //the dragon slayer has no friends and kills everyone 
     dragonSlayer.attack( paladin );
-    dragonSlayer.attack( dwarf ); 
-    */    
+    dragonSlayer.attack( dwarf );  
     
     std::cout << std::endl << "end of battle stats:" << std::endl;
 
