@@ -3,9 +3,10 @@
 
 // constructor ,  base constructor passed two values from derived class (hp_ and armor_)
 //                                                            THEN passed it's own name_
-Dwarf::Dwarf(std::string name_, int hp_, int armor_) : Character(hp_, armor_, 10), name(name_) 
+Dwarf::Dwarf(std::string name_, int hp_, int armor_) : Character(hp_, armor_, 4), name(name_) 
 {
-
+    helpfulItems = makeHelpfulItems(3);
+    defensiveItems = makeDefensiveItems(4);
 }
 
 const std::string& Dwarf::getName()
