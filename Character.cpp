@@ -1,6 +1,5 @@
 #include "Character.h"
 #include <iostream>
-#include <vector>
 
 #include "DefensiveItem.h"
 #include "HelpfulItem.h"
@@ -97,19 +96,32 @@ void Character::attackInternal(Character& other)
             a) your stats are restored to their initial value if they are lower than it.
             b) your stats are boosted 10%
             c) the initial value of your stats is updated to reflect this boosted stat for the next time you defeat another character.
+
+        ie same thing to all three stats?  ie. HitPoints, Armor, and AttackDamage?
+
       */
-        assert(false);
+        //assert(false);
+        victorRewardStats(*initialHitPoints, hitPoints);
+        victorRewardStats(*initialArmorLevel, armor);
+        victorRewardStats(*initialAttackDamage, attackDamage);
         std::cout << getName() << " defeated " << other.getName() << " and leveled up!" << std::endl;        
     }
 }
 
+void Character::victorRewardStats(int& initValue, int& currentValue) // this is the stat logic
+{
+    if(currentValue < initValue)
+    {
+        currentValue = initValue;
+    }
+    currentValue *= 1.1;
+    initValue = currentValue;
+}
+
+
 void Character::printStats()
 {
     std::cout << getName() << "'s stats: " << std::endl;
-    assert(false);
-    /*
-    make your getStats() use a function from the Utility.h
-    */
     std::cout << getStats(); 
     
     std::cout << std::endl;

@@ -1,7 +1,13 @@
 #include "Dragon.h"
 #include "DragonSlayer.h"
+#include "Utility.h"
 
-//Dragon::Dragon
+// did the exact same thing as Dwarf and Paladin
+
+Dragon::Dragon(std::string name_, int hp_, int armor_) : Character(hp_, armor_, 80), name(name_) 
+{
+
+}
 
 void Dragon::attack(Character &other)
 {
@@ -17,6 +23,13 @@ void Dragon::attack(Character &other)
     }
 }
 
-//Dragon::getName
+const std::string& Dragon::getName()
+{
+    return  name;
+}
 
-//Dragon::getStats
+std::string Dragon::getStats()         // using function from Utility.h
+{
+    return getCharacterStats(this);   // pass the Dragon instance to getCharacterStats
+}
+
